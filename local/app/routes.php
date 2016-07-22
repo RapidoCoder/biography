@@ -28,6 +28,27 @@ Route::group(array('prefix' => 'admin'), function () {
   ->where('id', '[0-9]+');
   Route::any('educations/update/{id}',array('before'=>'admin-not-login','as' => 'admin-education-update', 'uses'=>'EducationsController@update'))
   ->where('id', '[0-9]+'); 
+  /******************************work experience route***************************************/
+  Route::get('work_experiences',array('before'=>'admin-not-login','as' => 'admin-work-experiences', 'uses'=>'WorkExperiencesController@index'));
+  Route::any('work_experiences/add',array('before'=>'admin-not-login','as' => 'admin-add-work-experience', 'uses'=>'WorkExperiencesController@add'));
+  Route::get('work_experiences/delete/{id}',array('before'=>'admin-not-login','as' => 'admin-work-experience-delete', 'uses'=>'WorkExperiencesController@delete'))
+  ->where('id', '[0-9]+');
+  Route::any('work_experiences/update/{id}',array('before'=>'admin-not-login','as' => 'admin-work-experience-update', 'uses'=>'WorkExperiencesController@update'))
+  ->where('id', '[0-9]+');
+  /******************************portfolio categories route***************************************/
+  Route::get('portfolio-categories',array('before'=>'admin-not-login','as' => 'admin-portfolio-categories', 'uses'=>'PortfolioCategoriesController@index'));
+  Route::any('portfolio-category/add',array('before'=>'admin-not-login','as' => 'admin-add-portfolio-category', 'uses'=>'PortfolioCategoriesController@add'));
+  Route::get('portfolio-category/delete/{id}',array('before'=>'admin-not-login','as' => 'admin-portfolio-category-delete', 'uses'=>'PortfolioCategoriesController@delete'))
+  ->where('id', '[0-9]+');
+  Route::any('portfolio-category/update/{id}',array('before'=>'admin-not-login','as' => 'admin-portfolio-category-update', 'uses'=>'PortfolioCategoriesController@update'))
+  ->where('id', '[0-9]+'); 
+   /******************************portfolio route***************************************/
+  Route::get('port_folio',array('before'=>'admin-not-login','as' => 'admin-port-folio', 'uses'=>'PortFoliosController@index'));
+  Route::any('port_folio/add',array('before'=>'admin-not-login','as' => 'admin-add-port-folio', 'uses'=>'PortFoliosController@add'));
+  Route::get('port_folio/delete/{id}',array('before'=>'admin-not-login','as' => 'admin-port-folio-delete', 'uses'=>'PortFoliosController@delete'))
+  ->where('id', '[0-9]+');
+  Route::any('port_folio/update/{id}',array('before'=>'admin-not-login','as' => 'admin-port-folio-update', 'uses'=>'PortFoliosController@update'))
+  ->where('id', '[0-9]+'); 
 });
 
 
