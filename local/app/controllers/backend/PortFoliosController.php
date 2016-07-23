@@ -23,6 +23,7 @@ class PortFoliosController extends \BaseController
     return View::make('backend.port-folio.index')->with('title', 'PortFolios List')->with('breadcrumb', $breadCrumb)->with("port_folios",$port_folios);		
   }
   function add(){
+    $categories = ['0' => 'Please Select Category'] + PortfolioCategory::lists('title', 'id');
     if (Request::isMethod('post')) {
       $rules = array(
         'portfolio_category_id'=>'Required|not_in:0',
@@ -46,7 +47,9 @@ class PortFoliosController extends \BaseController
         $portfolio->portfolio_category_id = Input::get("portfolio_category_id");
         $portfolio->title = Input::get("title");
         $portfolio->description = Input::get("description");
+        $portfolio->image = $imageName;
         $portfolio->save();
+
         $msgs = array("type" => "alert alert-success",
           "msg" => "The Record Have Been  Successfully Added!");
 
@@ -69,52 +72,48 @@ class PortFoliosController extends \BaseController
         'url'=>'admin-user'
         )
       );    
-     return View::make('backend.portfolio.add')->with('title', 'Add Portfolio')->with('breadcrumb', $breadCrumb);
+     return View::make('backend.port-folio.add')->with('title', 'Add Portfolio')->with('breadcrumb', $breadCrumb)->with("categories", $categories);
    }
  }
  public function update($id){
-  $user = User::findOrFail($id);
+  $portfolio = PortFolio::findOrFail($id);
+  $categories = ['0' => 'Please Select Category'] + PortfolioCategory::lists('title', 'id');
   if (Request::isMethod('post')) {
     $rules = array(
-      'name' => 'Required',
-      'phone'=>'Required',
+      'portfolio_category_id'=>'Required|not_in:0',
       'title'=>'Required',
-      'email'=>'Required|email',
-      'address'=>'Required',
-      'about_me'=>'Required',
-      'summary'=>'Required',
-      'website'=>'Required'
+      'description'=>'Required'
 
       );
     $validator = Validator::make(Input::all(), $rules);
     if ($validator->passes()) {
-      $user->name = Input::get("name");
-      $user->phone = Input::get("phone");
-      $user->title = Input::get("title");
-      $user->email = Input::get("email");
-      $user->address = Input::get("address");
-      $user->about_me = Input::get("about_me");
-      $user->summary = Input::get("summary");
-      $user->website = Input::get("website");
+
+
+      $portfolio->portfolio_category_id = Input::get("portfolio_category_id");
+      $portfolio->title = Input::get("title");
+      $portfolio->description = Input::get("description");
       if (Input::hasFile('image')) {
-        if ($user->image!="default.gif" && file_exists(public_path() . '/assets/media/image/' . $user->image) ) {
-          File::delete(public_path() . '/assets/media/image/' . $user->image);
+        if ( file_exists(public_path() . '/assets/media/portfolio-images/' . $portfolio->image) ) {
+          File::delete(public_path() . '/assets/media/portfolio-images/' . $portfolio->image);
         }
         $image = Input::file('image');
-        $destinationPath =  public_path() .'/assets/media/image/';
+        $destinationPath =  public_path() .'/assets/media/portfolio-images/';
         $imageName = time() . "_" . $image->getClientOriginalName();
         $upload_success = $image->move($destinationPath, $imageName);
 
         if ($upload_success) {
           Image::make($destinationPath . $imageName)->save($destinationPath . $imageName);
         }
-        $user->image = $imageName;
+        $portfolio->image = $imageName;
       }
-      $user->save();
+
+      $portfolio->save();
+
       $msgs = array("type" => "alert alert-success",
         "msg" => "The Record Have Been  Successfully Updated!");
 
-      return Redirect::route('admin-user')->with("msgs", $msgs);
+      return Redirect::route('admin-port-folio')->with("msgs", $msgs);
+
     }else{
       return Redirect::back()->withErrors($validator->errors());
     }
@@ -127,13 +126,24 @@ class PortFoliosController extends \BaseController
         'url'=>'admin-dashboard'
         ),
       array(
-        'title'=>'User Info Update',
+        'title'=>'Portfolio Update',
         'homeIcon'=>false,
         'rightSide'=>false,
         'url'=>'admin-user'
         )
       );    
-    return View::make('backend.user.update')->with('title', 'User Profile Update')->with('breadcrumb', $breadCrumb)->with("user",$user);    
+    return View::make('backend.port-folio.update')->with('title', 'Portfolio Update')->with('breadcrumb', $breadCrumb)->with("categories",$categories)->with("portfolio", $portfolio);    
   }
+}
+function delete($id){
+  $portfolio = PortFolio::findOrFail($id);
+  if ( file_exists(public_path() . '/assets/media/portfolio-images/' . $portfolio->image) ) {
+    File::delete(public_path() . '/assets/media/portfolio-images/' . $portfolio->image);
+  }
+  $portfolio->delete();
+  $msgs = array("type" => "alert alert-danger",
+    "msg" => "The Record Have Been  Successfully Deleted!");
+
+  return Redirect::route('admin-port-folio')->with("msgs", $msgs);
 }
 }

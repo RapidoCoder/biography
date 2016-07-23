@@ -70,13 +70,13 @@
         {{$portfolio->id}}
       </td>
       <td>
-        {{$portfolio->image}}
+        {{HTML::image("assets/media/portfolio-images/".$portfolio->image,$portfolio->title, array("width"=>"150px", "height"=>"150px"))}}
       </td>
       <td>
-        {{$portfolio->portfolio_category_id->category}}
+        {{$portfolio->category->title}}
       </td>
       <td>
-        {{$portfolio->tit;e}}
+        {{$portfolio->title}}
       </td>
       <td>
         {{$portfolio->description}}

@@ -13,7 +13,7 @@
 		<div class="portlet box green ">
 			<div class="portlet-title">
 				<div class="caption">
-					<i class="fa fa-gift"></i> Update User Profile
+					<i class="fa fa-gift"></i> Update Portfolio
 				</div>
 				<div class="tools">
 					<a href="" class="collapse" data-original-title="" title="">
@@ -27,75 +27,36 @@
 				</div>
 			</div>
 			<div class="portlet-body form">
-				<form class="form-horizontal" role="form" method="POST"action="{{ URL::route('admin-user-update', $user->id)}}" enctype="multipart/form-data">
+				<form class="form-horizontal" role="form" method="POST"action="{{ URL::route('admin-port-folio-update', $portfolio->id)}}" enctype="multipart/form-data">
 					<div class="form-body">
-						<div class="form-group">
-							<label class="col-md-3 control-label">Name</label>
-							<div class="col-md-9">
-								<input type="text" name="name" class="form-control" value="{{$user->name}}">
-
-							</div>
-						</div>
-            <div class="form-group">
-              <label class="col-md-3 control-label">Title</label>
-              <div class="col-md-9">
-                <input type="text" name="title" class="form-control" value="{{$user->title}}">
-
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-md-3 control-label">Email</label>
-              <div class="col-md-9">
-                <input type="email" name="email" class="form-control" value="{{$user->email}}">
-
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-md-3 control-label">Phone</label>
-              <div class="col-md-9">
-                <input type="text" name="phone" class="form-control" value="{{$user->phone}}">
-
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-md-3 control-label">Image</label>
-              <div class="col-md-9">
-                {{ Form::file('image','',array('class'=>'form-control')) }}
-
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-md-3 control-label">Address</label>
-              <div class="col-md-9">
-                <input type="text" name="address" class="form-control" value="{{$user->address}}">
-
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-md-3 control-label">Website</label>
-              <div class="col-md-9">
-                <input type="text" name="website" class="form-control" value="{{$user->website}}">
-
-              </div>
-            </div>
-            <div class="form-group">
-             <label class="col-md-3 control-label">About Me</label>
-             <div class="col-md-9">
-              <textarea  name="about_me" class="form-control" >{{$user->about_me}}</textarea>
-
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-md-3 control-label">Summary</label>
+           <div class="form-group">
+            <label class="col-md-3 control-label">Category</label>
             <div class="col-md-9">
-              <textarea  name="summary" class="form-control" >{{$user->summary}}</textarea>
+              {{ Form::select('portfolio_category_id',$categories,$portfolio->portfolio_category_id,array("class"=>"form-control")) }}
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Title</label>
+            <div class="col-md-9">
+              <input type="text" name="title" class="form-control" value="{{$portfolio->title}}">
 
             </div>
           </div>
-
-
-
           <div class="form-group">
+            <label class="col-md-3 control-label">Image</label>
+            <div class="col-md-9">
+              {{ Form::file('image','',array('class'=>'form-control')) }}
+
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label">Description</label>
+            <div class="col-md-9">
+             <textarea  name="description" class="form-control" >{{$portfolio->description}}</textarea>
+
+           </div>
+         </div>
+         <div class="form-group">
            <div class="row">
             <div class="col-md-offset-3 col-md-9">
              <button type="submit" class="btn green">Update</button>

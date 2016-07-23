@@ -5,7 +5,7 @@ class PortFolio extends \Eloquent {
   protected $table = 'portfolios';
   public $timestamps = false;
   public function category(){
-    return $this->belongsTo('PortfolioCategory',' portfolio_category_id','id');
+    return $this->belongsTo('PortfolioCategory','portfolio_category_id','id');
 
   }
 }
