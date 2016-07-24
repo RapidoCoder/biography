@@ -49,6 +49,24 @@ Route::group(array('prefix' => 'admin'), function () {
   ->where('id', '[0-9]+');
   Route::any('port_folio/update/{id}',array('before'=>'admin-not-login','as' => 'admin-port-folio-update', 'uses'=>'PortFoliosController@update'))
   ->where('id', '[0-9]+'); 
+   /******************************skills route***************************************/
+  Route::get('skills',array('before'=>'admin-not-login','as' => 'admin-skills', 'uses'=>'SkillsController@index'));
+  Route::any('skill/add',array('before'=>'admin-not-login','as' => 'admin-add-skill', 'uses'=>'SkillsController@add'));
+  Route::get('skill/delete/{id}',array('before'=>'admin-not-login','as' => 'admin-skill-delete', 'uses'=>'SkillsController@delete'))
+  ->where('id', '[0-9]+');
+  Route::any('skill/update/{id}',array('before'=>'admin-not-login','as' => 'admin-skill-update', 'uses'=>'SkillsController@update'))
+  ->where('id', '[0-9]+'); 
+  /******************************Contact Us route***************************************/
+  Route::get('contactus',array('before'=>'admin-not-login','as' => 'admin-contactus', 'uses'=>'ContactUsController@index'));
+  Route::get('contactus/view/{id}',array('before'=>'admin-not-login','as' => 'admin-contactus-view', 'uses'=>'ContactUsController@view'))
+  ->where('id', '[0-9]+');
+  /******************************HireMe route***************************************/
+  Route::get('hireme',array('before'=>'admin-not-login','as' => 'admin-hire-me', 'uses'=>'HireMeController@index'));
+  Route::get('hireme/view/{id}',array('before'=>'admin-not-login','as' => 'admin-hire-me-view', 'uses'=>'HireMeController@view'))
+  ->where('id', '[0-9]+');
+   Route::get('hireme/delete/{id}',array('before'=>'admin-not-login','as' => 'admin-hire-me-delete', 'uses'=>'HireMeController@delete'))
+  ->where('id', '[0-9]+');
+ 
 });
 
 
