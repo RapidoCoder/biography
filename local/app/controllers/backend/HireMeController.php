@@ -33,6 +33,12 @@ class HireMeController extends \BaseController
       'url'=>'admin-dashboard'
       ),
     array(
+      'title'=>'Hire Me List',
+      'homeIcon'=>false,
+      'rightSide'=>true,
+      'url'=>'admin-hire-me'
+      ),
+    array(
       'title'=>'Hire Me View',
       'homeIcon'=>false,
       'rightSide'=>false,
@@ -45,8 +51,8 @@ class HireMeController extends \BaseController
 function delete($id){
   $hireme = HireMe::findOrFail($id);
   if (file_exists(public_path() . '/assets/media/cvs/' . $hireme->file) ) {
-            File::delete(public_path() . '/assets/media/cvs/' . $hireme->file);
-        }
+    File::delete(public_path() . '/assets/media/cvs/' . $hireme->file);
+  }
   $hireme->delete();
   $msgs = array("type" => "alert alert-danger",
     "msg" => "The Record Have Been  Successfully Deleted!");

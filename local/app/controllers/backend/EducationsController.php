@@ -66,7 +66,13 @@ class EducationsController extends \BaseController
       'url'=>'admin-dashboard'
       ),
     array(
-      'title'=>'User Info Update',
+      'title'=>'Educations List',
+      'homeIcon'=>false,
+      'rightSide'=>true,
+      'url'=>'admin-educations'
+      ),
+    array(
+      'title'=>'Update Education',
       'homeIcon'=>false,
       'rightSide'=>false,
       'url'=>'admin-user'
@@ -120,6 +126,12 @@ function add(){
       'homeIcon'=>true,
       'rightSide'=>true,
       'url'=>'admin-dashboard'
+      ),
+    array(
+      'title'=>'Educations List',
+      'homeIcon'=>false,
+      'rightSide'=>true,
+      'url'=>'admin-educations'
       ),
     array(
       'title'=>'Add Education',

@@ -54,6 +54,12 @@ class SkillsController extends \BaseController
       'url'=>'admin-dashboard'
       ),
     array(
+      'title'=>'Skills List',
+      'homeIcon'=>false,
+      'rightSide'=>true,
+      'url'=>'admin-skills'
+      ),
+    array(
       'title'=>'Skills Update',
       'homeIcon'=>false,
       'rightSide'=>false,
@@ -92,6 +98,12 @@ function add(){
       'homeIcon'=>true,
       'rightSide'=>true,
       'url'=>'admin-dashboard'
+      ),
+    array(
+      'title'=>'Skills List',
+      'homeIcon'=>false,
+      'rightSide'=>true,
+      'url'=>'admin-skills'
       ),
     array(
       'title'=>'Add Skill',

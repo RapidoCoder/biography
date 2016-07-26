@@ -23,7 +23,7 @@ class WorkExperiencesController extends \BaseController
    return View::make('backend.work-experience.index')->with('title', 'Work Experience List')->with('breadcrumb', $breadCrumb)->with("work_experienes",$work_experiences);		
  }
 
-function add(){
+ function add(){
   if (Request::isMethod('post')) {
     $rules = array(
       'title'=>'Required',
@@ -54,6 +54,12 @@ function add(){
       'url'=>'admin-dashboard'
       ),
     array(
+      'title'=>'Work Experiences List',
+      'homeIcon'=>false,
+      'rightSide'=>true,
+      'url'=>'admin-work-experiences'
+      ),
+    array(
       'title'=>'Add Work Experience',
       'homeIcon'=>false,
       'rightSide'=>false,
@@ -63,7 +69,7 @@ function add(){
    return View::make('backend.work-experience.add')->with('title', 'Add Work Experience')->with('breadcrumb', $breadCrumb);
  }
 }
- public function update($id){
+public function update($id){
   $work_experience = WorkExperience::findOrFail($id);
   
   if (Request::isMethod('post')) {
@@ -85,20 +91,26 @@ function add(){
   }
 }else{
  $breadCrumb = array(
-    array(
-      'title'=>'control panel',
-      'homeIcon'=>true,
-      'rightSide'=>true,
-      'url'=>'admin-dashboard'
-      ),
-    array(
-      'title'=>'Work Experiences Update',
-      'homeIcon'=>false,
-      'rightSide'=>false,
-      'url'=>'admin-update-work-experiences'
-      )
-    );     
-  return View::make('backend.work-experience.update')->with('title', 'Work Experience Update')->with('breadcrumb', $breadCrumb)->with("work_experience", $work_experience);    
+  array(
+    'title'=>'control panel',
+    'homeIcon'=>true,
+    'rightSide'=>true,
+    'url'=>'admin-dashboard'
+    ),
+  array(
+    'title'=>'Work Experiences List',
+    'homeIcon'=>false,
+    'rightSide'=>true,
+    'url'=>'admin-work-experiences'
+    ),
+  array(
+    'title'=>'Work Experiences Update',
+    'homeIcon'=>false,
+    'rightSide'=>false,
+    'url'=>'admin-update-work-experiences'
+    )
+  );     
+ return View::make('backend.work-experience.update')->with('title', 'Work Experience Update')->with('breadcrumb', $breadCrumb)->with("work_experience", $work_experience);    
 }
 }
 function delete($id){

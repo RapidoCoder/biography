@@ -66,6 +66,13 @@ class PortFoliosController extends \BaseController
         'url'=>'admin-dashboard'
         ),
       array(
+        'title'=>'PortFolios List',
+        'homeIcon'=>false,
+        'rightSide'=>true,
+        'url'=>'admin-port-folio'
+        )
+      ,
+      array(
         'title'=>'Add Portfolio',
         'homeIcon'=>false,
         'rightSide'=>false,
@@ -124,6 +131,12 @@ class PortFoliosController extends \BaseController
         'homeIcon'=>true,
         'rightSide'=>true,
         'url'=>'admin-dashboard'
+        ),
+      array(
+        'title'=>'PortFolios List',
+        'homeIcon'=>false,
+        'rightSide'=>true,
+        'url'=>'admin-port-folio'
         ),
       array(
         'title'=>'Portfolio Update',

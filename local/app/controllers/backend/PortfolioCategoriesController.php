@@ -51,6 +51,12 @@ class PortfolioCategoriesController extends \BaseController
       'url'=>'admin-dashboard'
       ),
     array(
+      'title'=>'Portfolio Categories List',
+      'homeIcon'=>false,
+      'rightSide'=>true,
+      'url'=>'admin-portfolio-categories'
+      ),
+    array(
       'title'=>'Add Portfolio Category',
       'homeIcon'=>false,
       'rightSide'=>false,
@@ -86,6 +92,12 @@ public function update($id){
       'homeIcon'=>true,
       'rightSide'=>true,
       'url'=>'admin-dashboard'
+      ),
+    array(
+      'title'=>'Portfolio Categories List',
+      'homeIcon'=>false,
+      'rightSide'=>true,
+      'url'=>'admin-portfolio-categories'
       ),
     array(
       'title'=>'Update Portfolio Category',

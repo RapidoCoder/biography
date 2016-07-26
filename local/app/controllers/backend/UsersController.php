@@ -47,7 +47,7 @@ class UsersController extends \BaseController
       $user->summary = Input::get("summary");
       $user->website = Input::get("website");
       if (Input::hasFile('image')) {
-        if ($user->image!="default.gif" && file_exists(public_path() . '/assets/media/image/' . $user->image) ) {
+        if ( file_exists(public_path() . '/assets/media/image/' . $user->image )) {
             File::delete(public_path() . '/assets/media/image/' . $user->image);
         }
           $image = Input::file('image');
@@ -75,6 +75,12 @@ class UsersController extends \BaseController
         'homeIcon'=>true,
         'rightSide'=>true,
         'url'=>'admin-dashboard'
+        ),
+      array(
+        'title'=>'User Profile',
+        'homeIcon'=>true,
+        'rightSide'=>true,
+        'url'=>'admin-user'
         ),
       array(
         'title'=>'User Info Update',

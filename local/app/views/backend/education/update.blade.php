@@ -13,7 +13,7 @@
 		<div class="portlet box green ">
       <div class="portlet-title">
        <div class="caption">
-        <i class="fa fa-gift"></i> Add Education
+        <i class="fa fa-gift"></i> Update Education
       </div>
       <div class="tools">
         <a href="" class="collapse" data-original-title="" title="">

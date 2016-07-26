@@ -31,6 +31,11 @@ class ContactUsController extends \BaseController
       'homeIcon'=>true,
       'rightSide'=>true,
       'url'=>'admin-dashboard'
+      ),array(
+      'title'=>'Contact Us List',
+      'homeIcon'=>false,
+      'rightSide'=>true,
+      'url'=>'admin-contactus'
       ),
     array(
       'title'=>'Contact Us View',

@@ -46,7 +46,7 @@
      </div>
    </div>
    <div class="form-group">
-     <label class=" col-md-3">Phone No</label>
+     <label class=" col-md-3">Message</label>
      <div class="col-md-9">
 
        <label class=" col-md-12 text-left">{{$contactus->message}}</label>

@@ -13,7 +13,7 @@
 		<div class="portlet box green ">
       <div class="portlet-title">
        <div class="caption">
-        <i class="fa fa-gift"></i> Add Work Experience
+        <i class="fa fa-gift"></i> Add Research Category
       </div>
       <div class="tools">
         <a href="" class="collapse" data-original-title="" title="">
@@ -27,35 +27,25 @@
       </div>
     </div>
     <div class="portlet-body form">
-     <form class="form-horizontal" role="form" method="POST" action="{{ URL::route('admin-add-work-experience')}}">
+     <form class="form-horizontal" role="form" method="POST" action="{{ URL::route('admin-add-research-category')}}">
       <div class="form-body">
        <div class="form-group">
-        <label class="col-md-3 control-label">Title</label>
+        <label class="col-md-3 control-label">Name</label>
         <div class="col-md-9">
-         <input type="text" name="title" class="form-control" placeholder="Enter text">
+         <input type="text" required name="name" class="form-control" placeholder="Enter Title">
          
        </div>
      </div>
-     
+
      <div class="form-group">
-      <label class="col-md-3 control-label">Description</label>
-      <div class="col-md-9">
-       <textarea  name="description" class="form-control" ></textarea>
-       
+       <div class="row">
+        <div class="col-md-offset-3 col-md-9">
+         <button type="submit" class="btn green">Create</button>
+
+       </div>
      </div>
    </div>
-   
-   
-   
-   <div class="form-group">
-     <div class="row">
-      <div class="col-md-offset-3 col-md-9">
-       <button type="submit" class="btn green">Create</button>
-       
-     </div>
-   </div>
- </div>
-</form>
+ </form>
 </div>
 </div>
 
@@ -68,9 +58,15 @@ Layout.init(); // init current layout
 QuickSidebar.init(); // init quick sidebar
 Demo.init(); // init demo features
 TableManaged.init();
+
+
+$(".add-btn").click(function(){
+  $(".dynamic-fields-container").append('<div class="form-group"> <label class="col-md-3 control-label">Achievment</label> <div class="col-md-8"> <input type="text" required name="achievment[]" class="form-control" placeholder="Enter Achievment Title"> </div> <div> <span class="glyphicon glyphicon-minus minus-btn" aria-hidden="true"></span> </div> </div>');
 });
-
-
+$(".green").on('click', '.minus-btn', function() {   
+  $(this).closest(".form-group").remove();
+});
+});
 </script>
 @stop
 
