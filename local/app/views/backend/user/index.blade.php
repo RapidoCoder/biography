@@ -83,7 +83,7 @@
     <label class=" col-md-3">Image</label>
      <div class="col-md-9">
 
-       <label class=" col-md-12 text-left">{{HTML::image("assets/media/image/".$user->image)}}</label>
+       <label class=" col-md-12 text-left">{{HTML::image("assets/media/image/".$user->image, $user->name,array("width"=>"200px", "height"=>"200px"))}}</label>
      </div>
    </div>
    <div class="form-group">

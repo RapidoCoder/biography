@@ -143,347 +143,347 @@
       <li>
         <a href="javascript:;">
          <i class="fa fa-briefcase" aria-hidden="true"></i>
+         <span class="title">
+          Work Experience</span>
+          <span class="arrow ">
+          </span>
+        </a>
+        <ul class="sub-menu">
+         <li>
+          <a href="{{URL::route('admin-work-experiences')}}">
+            Manage Work Experience</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="javascript:;">
+          <i class="glyphicon glyphicon-list"></i>
           <span class="title">
-            Work Experience</span>
-            <span class="arrow ">
-            </span>
-          </a>
-          <ul class="sub-menu">
+           Portfolio Category</span>
+           <span class="arrow ">
+           </span>
+         </a>
+         <ul class="sub-menu">
            <li>
             <a href="{{URL::route('admin-work-experiences')}}">
-              Manage Work Experience</a>
+              Manage Portfolio Categories</a>
             </li>
           </ul>
         </li>
         <li>
           <a href="javascript:;">
-            <i class="glyphicon glyphicon-list"></i>
+            <i class="glyphicon glyphicon-picture"></i>
             <span class="title">
-             Portfolio Category</span>
+             Portfolio</span>
              <span class="arrow ">
              </span>
            </a>
            <ul class="sub-menu">
              <li>
-              <a href="{{URL::route('admin-work-experiences')}}">
-                Manage Portfolio Categories</a>
+              <a href="{{URL::route('admin-port-folio')}}">
+                Manage Portfolio</a>
               </li>
             </ul>
           </li>
+          
           <li>
             <a href="javascript:;">
-              <i class="glyphicon glyphicon-picture"></i>
-              <span class="title">
-               Portfolio</span>
+             <i class="fa fa-tasks" aria-hidden="true"></i>
+             <span class="title">
+               Skills</span>
                <span class="arrow ">
                </span>
              </a>
              <ul class="sub-menu">
                <li>
-                <a href="{{URL::route('admin-port-folio')}}">
-                  Manage Portfolio</a>
+                <a href="{{URL::route('admin-skills')}}">
+                  Manage Skills</a>
                 </li>
               </ul>
             </li>
-      
+            <li>
+              <a href="javascript:;">
+                <i class="glyphicon glyphicon-envelope"></i>
+                <span class="title">
+                 Contact Us</span>
+                 <span class="arrow ">
+                 </span>
+               </a>
+               <ul class="sub-menu">
+                 <li>
+                  <a href="{{URL::route('admin-contactus')}}">
+                    Manage Contact Us</a>
+                  </li>
+                </ul>
+              </li>
               <li>
                 <a href="javascript:;">
-                 <i class="fa fa-tasks" aria-hidden="true"></i>
+                  <i class="fa fa-usd" aria-hidden="true"></i>
                   <span class="title">
-                   Skills</span>
+                   Hire Me</span>
                    <span class="arrow ">
                    </span>
                  </a>
                  <ul class="sub-menu">
                    <li>
-                    <a href="{{URL::route('admin-skills')}}">
-                      Manage Skills</a>
+                    <a href="{{URL::route('admin-hire-me')}}">
+                      Manage Hire Me</a>
                     </li>
                   </ul>
                 </li>
                 <li>
                   <a href="javascript:;">
-                    <i class="glyphicon glyphicon-envelope"></i>
+                    <i class="glyphicon glyphicon-list"></i>
                     <span class="title">
-                     Contact Us</span>
+                     Research Category</span>
                      <span class="arrow ">
                      </span>
                    </a>
                    <ul class="sub-menu">
                      <li>
-                      <a href="{{URL::route('admin-contactus')}}">
-                        Manage Contact Us</a>
+                      <a href="{{URL::route('admin-research-categories')}}">
+                        Manage Research Category</a>
                       </li>
                     </ul>
                   </li>
                   <li>
                     <a href="javascript:;">
-                      <i class="fa fa-usd" aria-hidden="true"></i>
+                      <i class="fa fa-file" aria-hidden="true"></i>
                       <span class="title">
-                       Hire Me</span>
+                       Research Project</span>
                        <span class="arrow ">
                        </span>
                      </a>
                      <ul class="sub-menu">
                        <li>
-                        <a href="{{URL::route('admin-hire-me')}}">
-                          Manage Hire Me</a>
+                        <a href="{{URL::route('admin-research-projects')}}">
+                          Manage Research Project</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- END SIDEBAR MENU1 -->
+                  <!-- BEGIN RESPONSIVE MENU FOR HORIZONTAL & SIDEBAR MENU -->
+                  <ul class="page-sidebar-menu visible-sm visible-xs" data-slide-speed="200" data-auto-scroll="true">
+                   <li>
+                    <a href="javascript:;">
+                      <i class="glyphicon glyphicon-user"></i>
+                      <span class="title">
+                        User Profile</span>
+                        <span class="arrow ">
+                        </span>
+                      </a>
+                      <ul class="sub-menu">
+                       <li>
+                        <a href="{{URL::route('admin-user')}}">
+                          Manage User Profile</a>
                         </li>
                       </ul>
                     </li>
                     <li>
                       <a href="javascript:;">
-                        <i class="glyphicon glyphicon-list"></i>
+                        <i class="glyphicon glyphicon-education"></i>
                         <span class="title">
-                         Research Category</span>
-                         <span class="arrow ">
-                         </span>
-                       </a>
-                       <ul class="sub-menu">
+                          Education</span>
+                          <span class="arrow ">
+                          </span>
+                        </a>
+                        <ul class="sub-menu">
                          <li>
-                          <a href="{{URL::route('admin-research-categories')}}">
-                            Manage Research Category</a>
+                          <a href="{{URL::route('admin-educations')}}">
+                            Manage Education</a>
                           </li>
                         </ul>
                       </li>
                       <li>
                         <a href="javascript:;">
-                          <i class="fa fa-file" aria-hidden="true"></i>
+                          <i class="fa fa-clock-o"></i>
                           <span class="title">
-                           Research Project</span>
-                           <span class="arrow ">
-                           </span>
-                         </a>
-                         <ul class="sub-menu">
-                           <li>
-                            <a href="{{URL::route('admin-research-projects')}}">
-                              Manage Research Project</a>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                      <!-- END SIDEBAR MENU1 -->
-                      <!-- BEGIN RESPONSIVE MENU FOR HORIZONTAL & SIDEBAR MENU -->
-                      <ul class="page-sidebar-menu visible-sm visible-xs" data-slide-speed="200" data-auto-scroll="true">
-                       <li>
-                        <a href="javascript:;">
-                          <i class="glyphicon glyphicon-user"></i>
-                          <span class="title">
-                            User Profile</span>
+                            Work Experience</span>
                             <span class="arrow ">
                             </span>
                           </a>
                           <ul class="sub-menu">
                            <li>
-                            <a href="{{URL::route('admin-user')}}">
-                              Manage User Profile</a>
+                            <a href="{{URL::route('admin-work-experiences')}}">
+                              Manage Work Experience</a>
                             </li>
                           </ul>
                         </li>
                         <li>
                           <a href="javascript:;">
-                            <i class="glyphicon glyphicon-education"></i>
+                            <i class="glyphicon glyphicon-list" aria-hidden="true"></i>
                             <span class="title">
-                              Education</span>
-                              <span class="arrow ">
-                              </span>
-                            </a>
-                            <ul class="sub-menu">
+                             Portfolio Category</span>
+                             <span class="arrow ">
+                             </span>
+                           </a>
+                           <ul class="sub-menu">
                              <li>
-                              <a href="{{URL::route('admin-educations')}}">
-                                Manage Education</a>
+                              <a href="{{URL::route('admin-work-experiences')}}">
+                                Manage Portfolio Categories</a>
                               </li>
                             </ul>
                           </li>
                           <li>
                             <a href="javascript:;">
-                              <i class="fa fa-clock-o"></i>
+                              <i class="glyphicon glyphicon-picture"></i>
                               <span class="title">
-                                Work Experience</span>
-                                <span class="arrow ">
-                                </span>
-                              </a>
-                              <ul class="sub-menu">
+                               Portfolio</span>
+                               <span class="arrow ">
+                               </span>
+                             </a>
+                             <ul class="sub-menu">
                                <li>
-                                <a href="{{URL::route('admin-work-experiences')}}">
-                                  Manage Work Experience</a>
+                                <a href="{{URL::route('admin-port-folio')}}">
+                                  Manage Portfolio</a>
                                 </li>
                               </ul>
                             </li>
                             <li>
                               <a href="javascript:;">
-                                <i class="glyphicon glyphicon-list" aria-hidden="true"></i>
+                                <i class="fa fa-tasks" aria-hidden="true"></i>
                                 <span class="title">
-                                 Portfolio Category</span>
+                                 Skills</span>
                                  <span class="arrow ">
                                  </span>
                                </a>
                                <ul class="sub-menu">
                                  <li>
-                                  <a href="{{URL::route('admin-work-experiences')}}">
-                                    Manage Portfolio Categories</a>
+                                  <a href="{{URL::route('admin-skills')}}">
+                                    Manage Skills</a>
                                   </li>
                                 </ul>
                               </li>
                               <li>
                                 <a href="javascript:;">
-                                  <i class="glyphicon glyphicon-picture"></i>
+                                  <i class="glyphicon glyphicon-envelope"></i>
                                   <span class="title">
-                                   Portfolio</span>
+                                   Contact Us</span>
                                    <span class="arrow ">
                                    </span>
                                  </a>
                                  <ul class="sub-menu">
                                    <li>
-                                    <a href="{{URL::route('admin-port-folio')}}">
-                                      Manage Portfolio</a>
+                                    <a href="{{URL::route('admin-contactus')}}">
+                                      Manage Contact Us</a>
                                     </li>
                                   </ul>
                                 </li>
                                 <li>
                                   <a href="javascript:;">
-                                    <i class="fa fa-tasks" aria-hidden="true"></i>
+                                    <i class="fa fa-usd" aria-hidden="true"></i>
                                     <span class="title">
-                                     Skills</span>
+                                     Hire Me</span>
                                      <span class="arrow ">
                                      </span>
                                    </a>
                                    <ul class="sub-menu">
                                      <li>
-                                      <a href="{{URL::route('admin-skills')}}">
-                                        Manage Skills</a>
+                                      <a href="{{URL::route('admin-hire-me')}}">
+                                        Manage Hire Me</a>
                                       </li>
                                     </ul>
                                   </li>
                                   <li>
                                     <a href="javascript:;">
-                                      <i class="glyphicon glyphicon-envelope"></i>
+                                      <i class="glyphicon glyphicon-list"></i>
                                       <span class="title">
-                                       Contact Us</span>
+                                       Research Category</span>
                                        <span class="arrow ">
                                        </span>
                                      </a>
                                      <ul class="sub-menu">
                                        <li>
-                                        <a href="{{URL::route('admin-contactus')}}">
-                                          Manage Contact Us</a>
+                                        <a href="{{URL::route('admin-research-categories')}}">
+                                          Manage Research Category</a>
                                         </li>
                                       </ul>
                                     </li>
                                     <li>
                                       <a href="javascript:;">
-                                        <i class="fa fa-usd" aria-hidden="true"></i>
+                                        <i class="fa fa-file" aria-hidden="true"></i>
                                         <span class="title">
-                                         Hire Me</span>
+                                         Research Project</span>
                                          <span class="arrow ">
                                          </span>
                                        </a>
                                        <ul class="sub-menu">
                                          <li>
-                                          <a href="{{URL::route('admin-hire-me')}}">
-                                            Manage Hire Me</a>
+                                          <a href="{{URL::route('admin-research-projects')}}">
+                                            Manage Research Project</a>
                                           </li>
                                         </ul>
                                       </li>
-                                      <li>
-                                        <a href="javascript:;">
-                                          <i class="glyphicon glyphicon-list"></i>
-                                          <span class="title">
-                                           Research Category</span>
-                                           <span class="arrow ">
-                                           </span>
-                                         </a>
-                                         <ul class="sub-menu">
-                                           <li>
-                                            <a href="{{URL::route('admin-research-categories')}}">
-                                              Manage Research Category</a>
-                                            </li>
-                                          </ul>
-                                        </li>
-                                        <li>
-                                          <a href="javascript:;">
-                                            <i class="fa fa-file" aria-hidden="true"></i>
-                                            <span class="title">
-                                             Research Project</span>
-                                             <span class="arrow ">
-                                             </span>
-                                           </a>
-                                           <ul class="sub-menu">
-                                             <li>
-                                              <a href="{{URL::route('admin-research-projects')}}">
-                                                Manage Research Project</a>
-                                              </li>
-                                            </ul>
-                                          </li>
-                                        </ul>
-                                      </li>
-                                      <!-- END RESPONSIVE MENU FOR HORIZONTAL & SIDEBAR MENU -->
-                                    </div>
-                                    <!-- END SIDEBAR -->
-                                    <!-- BEGIN CONTENT -->
-                                    <div class="page-content-wrapper">
-                                      <div class="page-content">
-                                       <h3 class="page-title">
-                                        {{ $title }}
-                                      </h3>
-                                      <div class="page-bar">
-                                        <ul class="page-breadcrumb">
-                                         @foreach($breadcrumb as $breadcrumbElement)
-                                         <li>
-                                          @if($breadcrumbElement['homeIcon'])
-                                          <i class="fa fa-home"></i>
-                                          @endIf
-                                          @if($breadcrumbElement['rightSide'] != false)
-                                          {{HTML::linkRoute($breadcrumbElement['url'],$breadcrumbElement['title'] )}}
-                                          @else
-                                          {{HTML::link("#",$breadcrumbElement['title'] )}}
-                                          @endIf
-                                          @if($breadcrumbElement['rightSide'])
-                                          <i class="fa fa-angle-right"></i>
-                                          @endIf
-                                        </li>
-                                        @endForeach
-                                      </ul>
-                                    </div>
-                                    <!-- Page Content Goes Here -->
-                                    @yield('content')
-                                    <!-- End Of Page Content-->
-                                    <div class="clearfix"></div>
-                                    <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
-                                    <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog">
-                                       <div class="modal-content">
-                                        <div class="modal-header">
-                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                                         <h4 class="modal-title">Modal title</h4>
-                                       </div>
-                                       <div class="modal-body">
-                                         Widget settings form goes here
-                                       </div>
-                                       <div class="modal-footer">
-                                         <button type="button" class="btn blue">Save changes</button>
-                                         <button type="button" class="btn default" data-dismiss="modal">Close</button>
-                                       </div>
-                                     </div>
-                                     <!-- /.modal-content -->
+                                    </ul>
+                                  </li>
+                                  <!-- END RESPONSIVE MENU FOR HORIZONTAL & SIDEBAR MENU -->
+                                </div>
+                                <!-- END SIDEBAR -->
+                                <!-- BEGIN CONTENT -->
+                                <div class="page-content-wrapper">
+                                  <div class="page-content">
+                                   <h3 class="page-title">
+                                    {{ $title }}
+                                  </h3>
+                                  <div class="page-bar">
+                                    <ul class="page-breadcrumb">
+                                     @foreach($breadcrumb as $breadcrumbElement)
+                                     <li>
+                                      @if($breadcrumbElement['homeIcon'])
+                                      <i class="fa fa-home"></i>
+                                      @endIf
+                                      @if($breadcrumbElement['rightSide'] != false)
+                                      {{HTML::linkRoute($breadcrumbElement['url'],$breadcrumbElement['title'] )}}
+                                      @else
+                                      {{HTML::link("#",$breadcrumbElement['title'] )}}
+                                      @endIf
+                                      @if($breadcrumbElement['rightSide'])
+                                      <i class="fa fa-angle-right"></i>
+                                      @endIf
+                                    </li>
+                                    @endForeach
+                                  </ul>
+                                </div>
+                                <!-- Page Content Goes Here -->
+                                @yield('content')
+                                <!-- End Of Page Content-->
+                                <div class="clearfix"></div>
+                                <!-- BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM-->
+                                <div class="modal fade" id="portlet-config" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                  <div class="modal-dialog">
+                                   <div class="modal-content">
+                                    <div class="modal-header">
+                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                                     <h4 class="modal-title">Modal title</h4>
                                    </div>
-                                   <!-- /.modal-dialog -->
+                                   <div class="modal-body">
+                                     Widget settings form goes here
+                                   </div>
+                                   <div class="modal-footer">
+                                     <button type="button" class="btn blue">Save changes</button>
+                                     <button type="button" class="btn default" data-dismiss="modal">Close</button>
+                                   </div>
                                  </div>
-                                 <!-- /.modal -->
+                                 <!-- /.modal-content -->
                                </div>
+                               <!-- /.modal-dialog -->
                              </div>
+                             <!-- /.modal -->
                            </div>
                          </div>
                        </div>
-                       <div class="page-footer">
-                         <div class="page-footer-inner">
-                          {{date("Y");}} &copy; Dr Rehman Ali.
-                        </div>
-                        <div class="scroll-to-top">
-                          <i class="icon-arrow-up"></i>
-                        </div>
-                      </div>
-                      <!-- END JAVASCRIPTS -->
-                    </body>
-                    <!-- END BODY -->
-                    </html>
+                     </div>
+                   </div>
+                   <div class="page-footer">
+                     <div class="page-footer-inner">
+                      {{date("Y");}} &copy; Dr Rehman Ali.
+                    </div>
+                    <div class="scroll-to-top">
+                      <i class="icon-arrow-up"></i>
+                    </div>
+                  </div>
+                  <!-- END JAVASCRIPTS -->
+                </body>
+                <!-- END BODY -->
+                </html>

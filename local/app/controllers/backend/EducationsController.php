@@ -96,9 +96,7 @@ function add(){
     $validator->each('achievment', ['required']);
     if ($validator->passes()) {
       $achievments = array();
-      $user_id = User::all()->first()->id; 
       $education = new Education;
-      $education->user_id = $user_id; 
       $education->title = Input::get("title");
       $education->start_year =DateTime::createFromFormat('Y', Input::get("start_year"));
       $education->end_year = DateTime::createFromFormat('Y', Input::get("end_year"));

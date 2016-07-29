@@ -82,6 +82,7 @@ Route::group(array('prefix' => 'admin'), function () {
   ->where('id', '[0-9]+'); 
   
 });
+ Route::get('/',array('as' => 'home', 'uses'=>'FrontendController@index'));
 
 
 

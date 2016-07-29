@@ -15,8 +15,6 @@ class CreateEducationsTable extends Migration {
     Schema::create('educations', function(Blueprint $table)
     {
       $table->increments('id');
-      $table->integer('user_id')->unsigned();
-      $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
       $table->dateTime('start_year');
       $table->dateTime('end_year');
       $table->string('title');
