@@ -50,6 +50,14 @@
        
      </div>
    </div>
+   <div class="form-group">
+      <label class="col-md-3 control-label">Experience Color</label>
+      <div class="col-md-9">
+       {{ Form::select('experience_color', ['0'=>'Select Color', 'progress-bar progress-bar-success'=>'Green', "progress-bar progress-bar-warning1"=>"Blue", "progress-bar progress-bar-success4"=>"Red"], null, array('class' => 'form-control')) }}
+       
+     </div>
+   </div>
+   
    
    
    

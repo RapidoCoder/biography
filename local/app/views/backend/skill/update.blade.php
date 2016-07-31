@@ -49,17 +49,25 @@
            <textarea  name="description" class="form-control" >{{$skill->description}}</textarea>
 
          </div>
-         <div class="form-group">
-           <div class="row">
-            <div class="col-md-offset-3 col-md-9">
-             <button type="submit" class="btn green">Update</button>
-
-           </div>
-         </div>
        </div>
-     </form>
+       <div class="form-group">
+        <label class="col-md-3 control-label">Experience Color</label>
+        <div class="col-md-9">
+         {{ Form::select('experience_color', ['0'=>'Select Color', 'progress-bar progress-bar-success'=>'Green', "progress-bar progress-bar-warning1"=>"Blue", "progress-bar progress-bar-success4"=>"Red"], $skill->experience_color, array('class' => 'form-control')) }}
+         
+       </div>
+     </div>
+     <div class="form-group">
+       <div class="row">
+        <div class="col-md-offset-3 col-md-9">
+         <button type="submit" class="btn green">Update</button>
+
+       </div>
+     </div>
    </div>
- </div>
+ </form>
+</div>
+</div>
 
 </div>
 </div>

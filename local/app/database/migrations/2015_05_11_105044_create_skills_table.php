@@ -18,7 +18,7 @@ class CreateSkillsTable extends Migration {
       $table->string('title');
       $table->text('description');
       $table->integer('experties_level');
-
+      $table->string('experience_color');
     });
   }
 

@@ -26,6 +26,7 @@ class SkillsController extends \BaseController
   $skill = Skill::findOrFail($id); 
   if (Request::isMethod('post')) {
     $rules = array(
+      'experience_color'=>'Required|not_in:0',
       'title'=>'Required',
       'description'=>'Required',
       'experties_level'=>'Required'
@@ -36,8 +37,9 @@ class SkillsController extends \BaseController
      $skill->title = Input::get("title");
      $skill->description =Input::get("description");
      $skill->experties_level = Input::get("experties_level");
+     $skill->experience_color = Input::get("experience_color");
      $skill->save();
-  
+
      $msgs = array("type" => "alert alert-success",
       "msg" => "The Record Have Been  Successfully Updated!");
 
@@ -72,6 +74,7 @@ class SkillsController extends \BaseController
 function add(){
   if (Request::isMethod('post')) {
     $rules = array(
+      'experience_color'=>'Required|not_in:0',
       'title'=>'Required',
       'description'=>'Required',
       'experties_level'=>'Required'
@@ -81,14 +84,15 @@ function add(){
     if ($validator->passes()) {
       $skill = new Skill;
       $skill->title = Input::get("title");
-     $skill->description =Input::get("description");
-     $skill->experties_level = Input::get("experties_level");
-     $skill->save();
-     $msgs = array("type" => "alert alert-success",
-      "msg" => "The Record Have Been  Successfully Added!");
+      $skill->description =Input::get("description");
+      $skill->experties_level = Input::get("experties_level");
+      $skill->experience_color = Input::get("experience_color");
+      $skill->save();
+      $msgs = array("type" => "alert alert-success",
+        "msg" => "The Record Have Been  Successfully Added!");
 
-     return Redirect::route('admin-skills')->with("msgs", $msgs);
-   }else{
+      return Redirect::route('admin-skills')->with("msgs", $msgs);
+    }else{
      return Redirect::back()->withErrors($validator->errors());
    }
  }else{
